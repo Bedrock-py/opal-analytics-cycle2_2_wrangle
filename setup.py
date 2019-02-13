@@ -17,11 +17,11 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 def opal_registration():
     from bedrock.core.opals import manage_opals
-    algs = ['Load']
+    algs = ['Wrangle']
     for alg in algs:
-        success = manage_opals("add", "ingest", "opals.cycle2_1_load.{0}.{0}".format(alg))
+        success = manage_opals("add", "ingest", "opals.cycle2_2_wrangle.{0}.{0}".format(alg))
         if not success:
-            success = manage_opals("reload", "ingest", "opals.cycle2_1_load.{0}.{0}".format(alg))
+            success = manage_opals("reload", "ingest", "opals.cycle2_2_wrangle.{0}.{0}".format(alg))
             if not success:
                 raise Exception("Unable to install: {}".format(alg))
 
@@ -43,7 +43,7 @@ class PostInstallCommand(install):
 
 
 setup(
-    name='opals.cycle2_1_load',
+    name='opals.cycle2_2_wrangle',
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
