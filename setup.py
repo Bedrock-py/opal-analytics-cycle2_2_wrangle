@@ -54,7 +54,7 @@ setup(
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/bedrock-py/opal-ingest-cycle2_1_load',
+    url='https://github.com/bedrock-py/opal-ingest-cycle2_2_wrangle',
 
     # Author details
     author='Georgia Tech Research Institute',
@@ -82,7 +82,7 @@ setup(
 
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
-    packages=['opals.cycle2_1_load'],
+    packages=['opals.cycle2_2_wrangle'],
     namespace_packages=['opals'],
     cmdclass={
         'develop': PostDevelopCommand,
