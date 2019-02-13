@@ -1,4 +1,4 @@
-"""Pip install script for bedrock.analytics.logit2.*
+"""Pip install script for
 """
 
 from setuptools import setup, find_packages
@@ -19,9 +19,9 @@ def opal_registration():
     from bedrock.core.opals import manage_opals
     algs = ['Wrangle']
     for alg in algs:
-        success = manage_opals("add", "ingest", "opals.cycle2_2_wrangle.{0}.{0}".format(alg))
+        success = manage_opals("add", "analytics", "opals.cycle2_2_wrangle.{0}.{0}".format(alg))
         if not success:
-            success = manage_opals("reload", "ingest", "opals.cycle2_2_wrangle.{0}.{0}".format(alg))
+            success = manage_opals("reload", "analytics", "opals.cycle2_2_wrangle.{0}.{0}".format(alg))
             if not success:
                 raise Exception("Unable to install: {}".format(alg))
 
